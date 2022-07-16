@@ -1,0 +1,18 @@
+.primetext {
+    font-family: 'Poppins';
+}
+
+.subtext {
+    font-family: 'Inter';
+}
+
+.fw-10 {font-weight: bold;}
+.fw-9 {font-weight: 900;}
+.fw-8 {font-weight: 800;}
+.fw-7 {font-weight: 700;}
+.fw-6 {font-weight: 600;}
+.fw-5 {font-weight: 500;}
+.fw-4 {font-weight: 400;}
+.fw-3 {font-weight: 300;}
+.fw-2 {font-weight: 200;}
+.fw-1 {font-weight: 100;}

@@ -6,18 +6,19 @@
             .module-preview-wrapper--outer {
                 display: flex;
                 justify-content: center;
+                height: 100vh;
+                width: 100%;
+                align-items: center;
             }
             .module-preview-wrapper--inner {
-                
+
             }
         </style>
     </head>
     <body>
         <app xscope="<?php echo $GLOBALS['scope']; ?>">
             <div class="module-preview-wrapper--outer">
-                <div class="module-preview-wrapper--inner">
-                    <?php module($GLOBALS['module']); ?>
-                </div>
+                <?php module($GLOBALS['module']); ?>
             </div>
 
         </app>

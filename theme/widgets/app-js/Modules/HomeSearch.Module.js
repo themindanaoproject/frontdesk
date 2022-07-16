@@ -1,5 +1,13 @@
 app.service('HomeSearchModule',(SearchSvc)=>{
-    SearchSvc.get.paths(()=>{
-        
-    });
+    return {
+        fetchPaths:(result)=>{
+            SearchSvc.get.paths({
+                success:()=>{
+
+                },
+                error:()=>result.error()
+            });
+        }
+    }
+
 });

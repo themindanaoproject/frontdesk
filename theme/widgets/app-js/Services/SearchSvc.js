@@ -1,15 +1,13 @@
-app.service('SearchSvc',($scope,ProjectLibrarySvc)=>{
+app.service('SearchSvc',($scope,MiddledeskSvc)=>{
     return {
         get: {
-            paths:(success,error)=>{
+            paths:(result)=>{
                 $.ajax({
                     method:'GET',
-                    url: ProjectLibrarySvc.root+'/paths.json',
-                    //url:'https://mellow-sable-853914.netlify.app',
+                    url: MiddledeskSvc.root+'/paths?region=Mindanao',
                     contentType:'application/json',
-                    success:(response)=>{
-                        console.log(response);
-                    }
+                    success:(response)=>result.success(response),
+                    error:()=>result.error()
                 });
             }
         }

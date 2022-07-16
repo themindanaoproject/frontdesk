@@ -1,7 +1,7 @@
 strawberry.create('app',()=>{
     setTimeout(()=>{
-        $("#Loader").fadeOut();
-        $("#Loader").html("");
+        $(".site-loader").fadeOut();
+        $(".site-loader").html("");
         $("#main").fadeIn();
     },1500);
 });
