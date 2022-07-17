@@ -1,0 +1,27 @@
+.no-decor {
+    text-decoration: none;
+}
+
+.no-decor:link{
+    text-decoration: none;
+}
+
+.no-decor:hover {
+    text-decoration: none;
+}
+
+.no-decor:visited {
+    text-decoration: none;
+}
+
+.text-color-dark:link {
+    color: #181818;
+}
+
+.text-color-dark:hover {
+    color: #181818;
+}
+
+.text-color-dark:visited {
+    color: #181818;
+}

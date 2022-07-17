@@ -4,7 +4,7 @@ $i=2;
 $k=12;
 $b=2/12;
 while($k>0){
-    echo '.pd-left-'.$k.' {padding-left: '.round($i,2).'em;}<br>';
+    echo '.border-w-'.$k.' {border-width: '.round($i,2).'em;}<br>';
     $k--;
     $i = $i - $b;
 }

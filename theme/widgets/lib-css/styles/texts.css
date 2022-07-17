@@ -50,3 +50,11 @@
 .line-height-3 {line-height: 0.5em;}
 .line-height-2 {line-height: 0.33em;}
 .line-height-1 {line-height: 0.17em;}
+
+.text-color-light {
+    color: #767676;
+}
+
+.text-color-dark {
+    color: #181818;
+}

@@ -1,4 +1,4 @@
-app.scope('Main',($scope,ViewSvc,HomeSearchModule)=>{
+app.scope('Main',($scope,ViewSvc,HomeSearchModule,CardModule)=>{
     if (ViewSvc.isCurrentView('index')) {
         HomeSearchModule.fetchPaths({
             success:()=>{
@@ -6,6 +6,16 @@ app.scope('Main',($scope,ViewSvc,HomeSearchModule)=>{
             },
             error:()=>{
                 ViewSvc.setView('error');
+            }
+        });
+    }
+    if (ViewSvc.isCurrentView('card')) {
+        CardModule.fetchCard({
+            success:()=>{
+                
+            },
+            error:()=>{
+                ViewSvc.setView('notFound');
             }
         });
     }

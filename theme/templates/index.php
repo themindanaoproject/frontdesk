@@ -11,14 +11,17 @@
                 <div xif="View.state=='default'">
 
                 </div>
-                <div xif="View.state=='dashboard'">
-                    This is the dashboard
+                <div xif="View.state=='card'">
+                    This is the card
                 </div>
                 <div xif="View.state=='index'">
                     <?php module('HomePage'); ?>
                 </div>
                 <div xif="View.state=='error'">
                     <?php module('ErrorPage'); ?>
+                </div>
+                <div xif="View.state=='notFound'">
+                    <?php module('NotFoundPage'); ?>
                 </div>
             </div>
         </app>

@@ -1,0 +1,23 @@
+.border-0 {
+    border-style: none;
+}
+
+.border-1 {
+    border-style: solid;
+}
+
+.border-bottom-1 {
+    border-bottom: solid;
+}
+
+.border-thin {
+    border-width: 1px;
+}
+
+.outline-0:focus {
+    outline: none;
+}
+
+.border-light {
+    border-color: #ebebeb;
+}

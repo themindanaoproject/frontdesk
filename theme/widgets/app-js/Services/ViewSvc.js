@@ -5,7 +5,7 @@ app.service('ViewSvc',($scope,$patch,UrlSvc)=>{
         }
     } else if (null!==UrlSvc.getParam('region')) {
         $scope.View = {
-            state: 'dashboard'
+            state: 'card'
         }
     } else {
         $scope.View = {
