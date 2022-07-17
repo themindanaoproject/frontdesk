@@ -12,7 +12,7 @@
 
                 </div>
                 <div xif="View.state=='card'">
-                    This is the card
+                    <?php module('CardPage'); ?>
                 </div>
                 <div xif="View.state=='index'">
                     <?php module('HomePage'); ?>

@@ -1,4 +1,12 @@
-app.service('CardModule',($scope,SearchSvc,UrlSvc,PathSvc)=>{
+app.service('CardModule',($scope,SearchSvc,UrlSvc,PathSvc,$patch,SidebarModule)=>{
+
+    let setCardDeviceView=()=>{
+        if ($(window).width()<769) {
+            $('.card-cover-photo').css('height','200px');
+        } else {
+            $('.card-cover-photo').css('height','300px');
+        }
+    }
 
     let regions = ['Zamboanga_Peninsula','Northern_Mindanao','Davao_Region','SOCCSKSARGEN','Caraga','BARMM'];
 
@@ -28,10 +36,13 @@ app.service('CardModule',($scope,SearchSvc,UrlSvc,PathSvc)=>{
 
             SearchSvc.get.cards(urlParams,{
                 success:(response)=>{
-                    console.log(response);
+                    $scope.Card = response.data;
+                    console.log(response.data);
+                    $patch('CardSinglePage');
+                    setCardDeviceView();
                 },
                 error:()=>{
-                    
+
                 }
             });
 

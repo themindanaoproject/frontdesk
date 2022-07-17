@@ -1,0 +1,13 @@
+.card-page-main {
+    transition: 0.5s;
+}
+
+.card-page-main-mobile-ctrl {
+    transition: 0.5s;
+}
+
+.card-page-main-wrapper {
+    padding-top: 60px;
+    width: 100%;
+    overflow-x: hidden;
+}

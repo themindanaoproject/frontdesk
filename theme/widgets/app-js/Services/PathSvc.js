@@ -31,7 +31,7 @@ app.service('PathSvc',()=>{
             let paramString = '';
             let pathObj = parsePath(path);
             if (undefined!==tcKey) tc = tcKey;
-            return joinPathObject(pathObj,tcKey);
+            return joinPathObject(pathObj,tc);
         },
         joinPathObject:(pathObj,tcKey)=>{
             return joinPathObject(pathObj,tcKey);

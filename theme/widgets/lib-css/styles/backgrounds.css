@@ -1,0 +1,12 @@
+.primary-bg {
+    background-color: #4d4c4e;
+    color: white;
+}
+
+.primary-bg:hover {
+    background-color: #6e6c70;
+}
+
+.bg-white {
+    background-color: white;
+}

@@ -58,3 +58,7 @@
 .text-color-dark {
     color: #181818;
 }
+
+.text-uppercase {
+    text-transform: uppercase;
+}
