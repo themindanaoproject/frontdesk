@@ -5,25 +5,22 @@ app.service('SidebarModule',($scope)=>{
     let isMobile = false;
     let sidebarMargin = '';
 
+    let styleTagElement=document.createElement('style');
+
     if ($(window).width()<420) {
         sidebarWidth = $(window).width();
         isMobile = true;
-        setTimeout(()=>{
-            $('.sidebar-module-main').css('width',$(window).width()+'px');
-            $('.card-page-main').css('width',$(window).width()+'px');
-            sidebarMargin = (($(window).width())-3);
-            $('.card-page-main-mobile-ctrl').css({
-                'width': (($(window).width())*2)+'px',
-                'margin-left': '-'+sidebarMargin+'px'
-            });
-        },1500);
+        sidebarMargin = (($(window).width())-3);
+        styleTagElement.innerText = '.sidebar-module-main{width:'+$(window).width()+'px;} .card-page-main.w-12{width:'+$(window).width()+'px;} .card-page-main-mobile-ctrl{width:'+(($(window).width())*2)+'px;margin-left:-'+sidebarMargin+'px;}';
     } else {
         sidebarWidth = '420px';
         isMobile = false;
-        setTimeout(()=>{
-            $('.sidebar-module-main').css('width','0px');
-        },1000);
+        styleTagElement.innerText = '.sidebar-module-main{width:0px;}';
     }
+
+    let headElements=document.getElementsByTagName('script')[0];
+    headElements.parentNode.insertBefore(styleTagElement,headElements);
+
 
     let clickCount = 1;
 
